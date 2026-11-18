@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  color-scheme: dark;
+  font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  background: #0b111d;
+  color: #f2f5fa;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: radial-gradient(ellipse at 50% 0%, #1a2940 0%, #0b111d 58%);
+}
+
+.card {
+  width: min(100%, 560px);
+  padding: clamp(28px, 7vw, 56px);
+  border: 1px solid #29364a;
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(24, 35, 52, .96), rgba(15, 23, 36, .96));
+  box-shadow: 0 32px 100px #0008;
+}
+
+.eyebrow, .counter-label, footer {
+  font-family: 'DM Mono', ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.eyebrow { display: flex; align-items: center; gap: 10px; color: #a6b4c9; font-size: 11px; }
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: #76e0bd; box-shadow: 0 0 12px #76e0bd99; }
+h1 { margin: 30px 0 14px; font-size: clamp(36px, 8vw, 54px); line-height: 1.08; letter-spacing: -.055em; }
+h1 span { color: #93a7c2; }
+.intro { max-width: 390px; margin: 0; color: #a3b0c3; font-size: 14px; line-height: 1.8; }
+.counter { margin-top: 38px; padding: 23px; border: 1px solid #2b3a50; border-radius: 16px; background: #101a29; }
+.counter-label { margin: 0; color: #8293ab; font-size: 10px; }
+output { display: block; margin: 5px 0 18px; font-size: 56px; line-height: 1.15; font-weight: 700; letter-spacing: -.06em; font-variant-numeric: tabular-nums; }
+.actions { display: flex; align-items: center; gap: 10px; }
+.button { min-height: 42px; border: 1px solid transparent; border-radius: 9px; padding: 0 15px; color: #eaf0f8; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; transition: transform .15s, background .15s, border-color .15s; }
+.button:hover { transform: translateY(-1px); }
+.button:focus-visible { outline: 2px solid #8ff0d1; outline-offset: 3px; }
+.button-primary { flex: 1; background: #8ff0d1; color: #10241f; }
+.button-primary:hover { background: #a6f6dd; }
+.button-quiet { border-color: #304057; background: #182436; }
+.button-quiet:hover { background: #223149; }
+footer { display: flex; justify-content: space-between; gap: 12px; margin-top: 25px; color: #718198; font-size: 9px; letter-spacing: .07em; text-transform: none; }
+
+@media (max-width: 420px) {
+  .actions { flex-wrap: wrap; }
+  .button-primary { order: -1; flex-basis: 100%; }
+  footer { flex-direction: column; }
+}

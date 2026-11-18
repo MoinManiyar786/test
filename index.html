@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101827" />
+    <title>Test App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <div class="eyebrow"><span class="status-dot"></span> TEST APP</div>
+      <h1>A little progress,<br /><span>one click at a time.</span></h1>
+      <p class="intro">A tiny interactive app to try things out. Your count stays saved on this device.</p>
+
+      <section class="counter" aria-label="Click counter">
+        <p class="counter-label">YOUR COUNT</p>
+        <output id="count" aria-live="polite">0</output>
+        <div class="actions">
+          <button id="decrement" class="button button-quiet" type="button" aria-label="Decrease count">−</button>
+          <button id="increment" class="button button-primary" type="button">Add one <span aria-hidden="true">↗</span></button>
+          <button id="reset" class="button button-quiet" type="button">Reset</button>
+        </div>
+      </section>
+
+      <footer><span>Made for testing</span><span id="message">Ready when you are.</span></footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
